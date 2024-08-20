@@ -1,0 +1,140 @@
+header {
+    width: 100%;
+    background-color:#c7efe0;
+    box-shadow: 2px 2px 2px 2px #00000050;
+}
+
+#web {
+    display:none;
+}
+
+#mobile {
+    padding:25px;
+}
+
+#mobile-logo {
+    height: 50px;
+    width: 75px;
+}
+
+#menu-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#top-icons {
+    display:flex;
+    justify-content: space-between;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-top:5px;
+    cursor: pointer;
+}
+
+li a {
+    color: black;
+    font-size:1.5rem;
+    text-decoration:none;
+}
+
+
+@media only screen and (min-width: 769px) {
+    
+    #mobile {
+        display:none;
+    }
+
+    #web {
+        display:inline;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    }
+
+    .nav-section {
+        gap:30px;
+        display: flex;
+        align-items:center;
+        margin: 10px
+    }
+
+    #search-icon, #cart-icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    #searchField, #searchBtn {
+        padding: 10px;
+        border-radius: 10px;
+        display:none;
+    }
+
+    #logo {
+        height: 60px;
+        width: 95px;
+        margin-left:5px;
+    }
+    #search-section {
+        display:flex;
+        align-items: center;
+        gap: 15px;
+    }   
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        margin: 20px;
+        list-style-type: none;
+        font-weight:bold;
+        font-size:1.5rem;
+    }
+
+    li a {
+        text-decoration: none;  
+        color: black;
+    }
+
+    li:hover {
+        color:  #31c48d;
+    }
+
+    .cart-logout-section {
+        display:flex;
+        justify-content:space-between;
+        gap: 15px
+    }
+
+    #cart-icon {
+        cursor:pointer;
+    }
+
+    #logout-btn {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 5px;
+        background-color: #528265;
+        font-weight: bold;
+        cursor:pointer;
+    }
+
+    #logout-btn:hover {
+        background-color: #31c48d;
+        color: #c7efe0;
+    }
+}
