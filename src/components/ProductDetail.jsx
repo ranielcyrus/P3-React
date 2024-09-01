@@ -53,55 +53,49 @@ export const ProductDetail = () => {
 
     return (
         <>
-        
-        <Navbar />
+            <Navbar />
 
-        <section className='product-detail'>
-
-            <div className='item-summary'>
-                <div className='item-background'>
-                    <h2 className='item-details-text'>Item Details</h2>
-                    <div className='item-details'>
-                        <p className='details'>Item Name: {filterdata.name}</p>
-                        <p className='details'>Item Price: {`$${filterdata.price}`}</p>
-                        <p className='details'>Category: {filterdata.category}</p>
-                        <label className='details'>Size: 
-                        <select className='details' onChange={handleSize} value={size}>
-                            <option value={7}>7</option>
-                            <option value={8}>8</option>
-                            <option value={9}>9</option>
-                            <option value={10}>10</option>
-                        </select>
-                        </label>
-                        <label className='details' id='qty-form'>Quantity: 
-                            <p className='increment-decrement' onClick={handleDecrementQTY}>-</p>
-                            <p>{qty}</p>
-                            <p className='increment-decrement' onClick={handleIncrementQTY}>+</p>
-                        </label>
-                        <p className='details'>{`Total Price: $${totalPrice}`}</p>
-                        <div className='product-buttons'>
-                            <button onClick={handleGoBack}>Go Back</button>
-                            <button onClick={handleAddtoCart}>Add to Cart</button>
+            <section className='product-detail'>
+                <div className='item-summary'>
+                    <div className='item-background'>
+                        <h2 className='item-details-text'>Item Details</h2>
+                        <div className='item-details'>
+                            <p className='details'>Item Name: {filterdata.name}</p>
+                            <p className='details'>Item Price: {`$${filterdata.price}`}</p>
+                            <p className='details'>Category: {filterdata.category}</p>
+                            <label className='details'>Size: 
+                            <select className='details' onChange={handleSize} value={size}>
+                                <option value={7}>7</option>
+                                <option value={8}>8</option>
+                                <option value={9}>9</option>
+                                <option value={10}>10</option>
+                            </select>
+                            </label>
+                            <label className='details' id='qty-form'>Quantity: 
+                                <p className='increment-decrement' onClick={handleDecrementQTY}>-</p>
+                                <p>{qty}</p>
+                                <p className='increment-decrement' onClick={handleIncrementQTY}>+</p>
+                            </label>
+                            <p className='details'>{`Total Price: $${totalPrice}`}</p>
+                            <div className='product-buttons'>
+                                <button onClick={handleGoBack}>Go Back</button>
+                                <button onClick={handleAddtoCart}>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div className='shadow-canvas'>
-                <Canvas camera={{fov: filterdata.fov, near: 0.1, far: 1000, position: [5, 1, filterdata.pos]}} >
-                    <ambientLight intensity={0.5} />
-                    <directionalLight position={[10, 10, 10]} intensity={1} /> 
+                <div className='shadow-canvas'>
+                    <Canvas camera={{fov: filterdata.fov, near: 0.1, far: 1000, position: [5, 1, filterdata.pos]}} >
+                        <ambientLight intensity={0.5} />
+                        <directionalLight position={[10, 10, 10]} intensity={1} /> 
 
-                    {/* Render models with different URLs and positions */}
-                    <Model url={filterdata  .url} position={[0, 0, 0]} scale={[1, 1, 1]}  />
-                    <OrbitControls />
-                </Canvas>
-            </div>
-
-        </section>
-            
-            
-            
+                        {/* Render models with different URLs and positions */}
+                        <Model url={filterdata.url} position={[0, 0, 0]} scale={[1, 1, 1]}  />
+                        <OrbitControls />
+                    </Canvas>
+                </div>
+            </section> 
         </>
     )
 }

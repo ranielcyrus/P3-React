@@ -5,7 +5,7 @@
     margin-top:30%;
 }
 
-#login {
+#login-section>div {
     background-color: #31c48d;
     display:flex; 
     flex-direction: column;
@@ -42,9 +42,17 @@ form {
     height: 30px;
     border-radius: 5px;
     font-weight:bold;
+    border:none;
+}
+
+#login-btn {
     background-color: #528265;
     color: #31c48d;
-    border:none;
+}
+
+#signup-btn {
+    background-color: #c7efe0;
+    color: #31c48d;
 }
 
 #login-btn:hover{

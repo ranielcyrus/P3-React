@@ -16,6 +16,7 @@ export const SignUp = () => {
             navigate('/');
         } else {
             alert('Empty fields!')
+            e.preventDefault() //prevent the page from refreshing
         }  
     };
 
@@ -25,36 +26,35 @@ export const SignUp = () => {
 
     return (
         <>
+            <section id="signup-section">
+                <div>
+                    <img src={Logo} id="logo-signup-img" alt="logo" />
+                    <h2 id='sign-up-label'>Sign Up</h2>
+                    <form>
+                        <div id='labels-fields'>
 
-                <section id="signup-section">
-                    <div id="signup">
-                        <img src={Logo} id="logo-signup-img" alt="logo" />
-                        <h2>Sign Up</h2>
-                        <form>
-                            <div id='labels-fields'>
+                            <label>Username</label>
+                            <input 
+                                type="text"
+                                value={user}
+                                onChange={(e) => setUser(e.target.value)} 
+                            />
 
-                                <label>Username</label>
-                                <input 
-                                    type="text"
-                                    value={user}
-                                    onChange={(e) => setUser(e.target.value)} 
-                                />
+                            <label>Password</label>
+                            <input 
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)} 
+                            />
 
-                                <label>Password</label>
-                                <input 
-                                type="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)} 
-                                />
-
-                            </div>
-                            <div id='login-signup-btn'>
-                                <button id='goback-btn' onClick={handleGoBack}>Go Back</button>
-                                <button id='signup-btn' onClick={handleSignUp}>Sign up</button>
-                            </div>
-                        </form>
-                    </div>
-                </section>
+                        </div>
+                        <div id='login-signup-btn'>
+                            <button id='goback-btn' onClick={handleGoBack}>Go Back</button>
+                            <button id='signup-btn' onClick={handleSignUp}>Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </>
     )
 }

@@ -5,7 +5,11 @@
     margin-top:30%;
 }
 
-#signup {
+#sign-up-label {
+    color:#fefefe;
+}
+
+#signup-section>div {
     background-color: #31c48d;
     display:flex; 
     flex-direction: column;
@@ -13,7 +17,6 @@
     padding:60px;
     border-radius: 15px;
 }
-
 
 #logo-signup-img {
     height:150px
@@ -42,13 +45,21 @@ form {
     height: 30px;
     border-radius: 5px;
     font-weight:bold;
-    background-color: #528265;
-    color: #31c48d;
     border:none;
 }
 
-#goback-btn:hover, #signup-btn:hover{
-    background-color: #c7efe0;
+#goback-btn {
+    background-color: #528265;
+    color: #31c48d;
+}
+
+#goback-btn:hover {
+    background-color:  #c7efe0;
+    color: #31c48d;
+}
+
+#signup-btn:hover{
+    background-color: #528265;
     color: #31c48d;
 }
 

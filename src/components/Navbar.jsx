@@ -1,13 +1,10 @@
-
 import { useState } from 'react';
-
 import logo from '../assets/logo.png'
 import searchIcon from '../assets/search.png'
 import cartIcon from '../assets/cart.png'
 import menuIcon from '../assets/burger-menu.png'
 import { useNavigate } from 'react-router-dom';
 import './Navbar.css'
-
 import Model from './Model.jsx';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
@@ -27,10 +24,10 @@ const Navbar = () => {
                 navigate('/home');
                 break;
             case 'Men' : 
-                navigate('/men')
+                navigate('/category/men')
                 break;
             case 'Women' :
-                navigate('/women')
+                navigate('/category/women')
                 break;
             case 'Cart' :
                 navigate('/cart')
@@ -109,8 +106,6 @@ const Navbar = () => {
                         </div> 
                     </section>     
             </header>
-
-
         </>
     )
 }

@@ -19,6 +19,7 @@ export const Login = () => {
             navigate('/home'); 
         } else { 
             alert('Invalid credentials'); 
+            e.preventDefault() //prevent the page from refreshing
         }
     }
 
@@ -28,36 +29,35 @@ export const Login = () => {
 
     return (
         <>
+            <section id="login-section">
+                <div>
+                    <img src={Logo} id="logo-login-img" alt="logo" />
+                    <h2>Log in</h2>
+                    <form>
+                        <div id='labels-fields'>
 
-                <section id="login-section">
-                    <div id="login">
-                        <img src={Logo} id="logo-login-img" alt="logo" />
-                        <h2>Log in</h2>
-                        <form>
-                            <div id='labels-fields'>
+                            <label>Username</label>
+                            <input 
+                            type="text"
+                            value={user} 
+                            onChange={(e) => setUser(e.target.value)} 
+                            />
 
-                                <label>Username</label>
-                                <input 
-                                type="text"
-                                value={user} 
-                                onChange={(e) => setUser(e.target.value)} 
-                                />
+                            <label>Password</label>
+                            <input 
+                            type="password" 
+                            value={password} 
+                            onChange={(e) => setPassword(e.target.value)}
+                            />
 
-                                <label>Password</label>
-                                <input 
-                                type="password" 
-                                value={password} 
-                                onChange={(e) => setPassword(e.target.value)}
-                                />
-
-                            </div>
-                            <div id='login-signup-btn'>
-                                <button id='login-btn' onClick={handleLogin}>Log in</button>
-                                <button id='signup-btn' onClick={handleSignup}>Sign up</button>
-                            </div>
-                        </form>
-                    </div>
-                </section>
+                        </div>
+                        <div id='login-signup-btn'>
+                            <button id='login-btn' onClick={handleLogin}>Log in</button>
+                            <button id='signup-btn' onClick={handleSignup}>Sign up</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </>
     )
 }

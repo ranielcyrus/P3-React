@@ -30,8 +30,8 @@ const Cart = () => {
       alert('insufficient funds!')
     } else {
       const change = payment - totalPrice;
-      alert(`Order Success! your change is ${change}`)
-      window.location.reload();
+      alert(`Order Success! your change is ${change}`);
+      clearCart(); 
     }
   }
 

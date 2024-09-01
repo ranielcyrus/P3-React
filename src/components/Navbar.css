@@ -121,6 +121,13 @@ li a {
 
     #cart-icon {
         cursor:pointer;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    #cart-icon:hover {
+        position: relative;
+        transform: scale(1.4);
+        transition: ease-in 0.3s;
     }
 
     #logout-btn {
